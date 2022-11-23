@@ -4,6 +4,8 @@ import entity.User;
 
 public class AdapterImpl implements Adapter {
 
+    private final String EMAIL_PATTERN = "\\w+@\\w+.\\w+ \\w+ \\d+";
+
     @Override
     public User toUser(Object data) {
 
@@ -18,9 +20,15 @@ public class AdapterImpl implements Adapter {
 
     }
 
+    @Override
     public boolean isSupportedFormat(Object o) {
 
-        return o instanceof User || o instanceof String;
+        if (o instanceof String str) {
+
+            return str.matches(EMAIL_PATTERN);
+        }
+
+        return o instanceof User;
 
     }
 

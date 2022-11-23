@@ -8,7 +8,8 @@ import java.util.Arrays;
 public class Demo {
 
     private static final Object[] RAW_DATA = new Object[]{"foo@mail.com Liam 29", null, "jack_moo@google.com Jack 20",
-            "allin@yandex.ru Alli 42", new User("hello@gmail.com", "Koala", 25), new char[]{'E'}};
+            "allin@yandex.ru Alli 42", new User("hello@gmail.com", "Koala", 25), new char[]{'E'}, null,
+            45.0, "NOT SUPPORTED DATA"};
 
     public static void main(String[] args) {
 
