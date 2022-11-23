@@ -19,4 +19,6 @@ public class AdapterTest {
 
         assertEquals(expected, actual);
     }
+
+
 }

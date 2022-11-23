@@ -7,23 +7,19 @@ import java.util.Map;
 
 interface Store {
 
-    void save(String data);
+    void save(User user);
 
     void show();
 }
 
-public class Storage implements Store{
+public class Storage implements Store {
 
     private Map<Integer, User> users = new HashMap<>();
 
     private int ID = 1;
 
-    private final Adapter adapter = new AdapterImpl();
-
     @Override
-    public void save(String data) {
-
-        User user = adapter.toUser(data);
+    public void save(User user) {
 
         users.put(ID++, user);
 
